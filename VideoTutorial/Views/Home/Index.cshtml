@@ -1,0 +1,17 @@
+﻿
+<div class="text-center">
+
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <br />
+    <br />
+    @if (Model != null)
+    {
+        <select id="selAreas">
+            <option value="0">Seleccionar empleado</option>
+            @foreach (VideoTutorial.Models.Empleado empleado in Model)
+            {
+                <option value="@empleado.Id">@empleado.Nombre</option>
+            }
+        </select>
+    }
+</div>
